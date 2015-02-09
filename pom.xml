@@ -24,7 +24,7 @@
 		<!-- testing -->
 		<junit.version>4.11</junit.version>
 		<!-- json -->
-		<com.fasterxml.jackson.version>2.4.3</com.fasterxml.jackson.version>
+		<com.fasterxml.jackson.version>2.5.1</com.fasterxml.jackson.version>
 		<!-- guava -->
 		<com.guava.version>17.0</com.guava.version>
 		<!-- caching -->
