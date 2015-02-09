@@ -52,7 +52,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
   public ViewResolver configureViewResolver() {
     InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 
-    viewResolver.setPrefix("/WEB-INF/views");
+    viewResolver.setPrefix("/WEB-INF/views/");
     viewResolver.setSuffix(".jsp");
     return viewResolver;
   }
