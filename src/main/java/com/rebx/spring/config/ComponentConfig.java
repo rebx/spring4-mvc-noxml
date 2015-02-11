@@ -11,7 +11,8 @@ public class ComponentConfig {
 
   @Bean
   public ObjectMapper objectMapper() {
-    Jackson2ObjectMapperFactoryBean bean = new Jackson2ObjectMapperFactoryBean();
+    Jackson2ObjectMapperFactoryBean bean =
+        new Jackson2ObjectMapperFactoryBean();
     bean.setIndentOutput(true);
     bean.afterPropertiesSet();
     ObjectMapper objectMapper = bean.getObject();

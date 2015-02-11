@@ -22,13 +22,15 @@ public class AppInitializer implements WebApplicationInitializer {
 
     servletContext.addListener(new ContextLoaderListener(ctx));
     final DispatcherServlet dispServlet = new DispatcherServlet(ctx);
-    ServletRegistration.Dynamic dispatcher = servletContext.addServlet(servletName, dispServlet);
+    ServletRegistration.Dynamic dispatcher =
+        servletContext.addServlet(servletName, dispServlet);
     dispatcher.setLoadOnStartup(1);
     dispatcher.addMapping(rootMapping);
   }
 
   private WebApplicationContext getContext() {
-    AnnotationConfigWebApplicationContext wac = new AnnotationConfigWebApplicationContext();
+    AnnotationConfigWebApplicationContext wac =
+        new AnnotationConfigWebApplicationContext();
     wac.setConfigLocation("com.rebx.spring.config");
     return wac;
   }

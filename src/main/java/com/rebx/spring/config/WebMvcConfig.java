@@ -40,17 +40,20 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    registry.addResourceHandler("/resources/**").addResourceLocations("/resources");
+    registry.addResourceHandler("/resources/**").addResourceLocations(
+        "/resources");
   }
 
   @Override
-  public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+  public void configureDefaultServletHandling(
+      DefaultServletHandlerConfigurer configurer) {
     configurer.enable();
   }
 
   @Bean
   public ViewResolver configureViewResolver() {
-    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+    InternalResourceViewResolver viewResolver =
+        new InternalResourceViewResolver();
 
     viewResolver.setPrefix("/WEB-INF/views/");
     viewResolver.setSuffix(".jsp");
@@ -58,8 +61,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
   }
 
   @Override
-  public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-    MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+  public void configureMessageConverters(
+      List<HttpMessageConverter<?>> converters) {
+    MappingJackson2HttpMessageConverter converter =
+        new MappingJackson2HttpMessageConverter();
     converter.setObjectMapper(objectMapper);
     converters.add(converter);
     super.configureMessageConverters(converters);

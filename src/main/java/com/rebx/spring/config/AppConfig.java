@@ -16,7 +16,8 @@ public class AppConfig {
   @Bean
   public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
 
-    final PropertyPlaceholderConfigurer propConfig = new PropertyPlaceholderConfigurer();
+    final PropertyPlaceholderConfigurer propConfig =
+        new PropertyPlaceholderConfigurer();
 
     propConfig.setIgnoreResourceNotFound(true);
     String sysPropPath = System.getProperty("app.cfg");
